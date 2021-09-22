@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opgave3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="app" class="Jumbotron">
+        <h1>String Manipulation</h1>
+        <input type="text" v-model.lazy="word" placeholder="Word">
+        <button v-on:click="outputWord(word)">Show it!</button>
+        <div v-if="run">
+            <ul>
+                <li> {{word}}</li>
+                <li> {{outputMessageToUpper}} </li>
+                <li> {{outputMessageToLower}} </li>
+            </ul>
+            <br>
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Output</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td> {{word}} </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td> {{outputMessageToUpper}} </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td> {{outputMessageToLower}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
