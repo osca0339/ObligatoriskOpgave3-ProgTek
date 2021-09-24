@@ -14,7 +14,6 @@ Vue.createApp({
                 this.run = true;
                 this.outputMessageToLower = this.word.toLowerCase();
                 this.outputMessageToUpper = this.word.toUpperCase();
-            
             }
         }
     }
